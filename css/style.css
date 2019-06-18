@@ -167,11 +167,11 @@ embed {
 }
 
 .cloud-mid {
-  animation: 37s cloud-mid infinite alternate linear;
+	animation: 37s cloud-mid infinite alternate linear;
 }
 
 .cloud-right {
-  animation: 31s cloud-right infinite alternate linear;
+	animation: 31s cloud-right infinite alternate linear;
 }
 
 /*IDs*/
@@ -189,7 +189,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-	color: var(dark-grey);
+	color: var(--dark-grey);
 }
 
 a:active {
@@ -245,12 +245,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @keyframes cloud-right {
-  from {
-    transform: translate(2650px, 95px);
-  }
-  to {
-    transform: translate(-3000px, 95px);
-  }
+	from {
+		transform: translate(2650px, 95px);
+	}
+	to {
+		transform: translate(-3000px, 95px);
+	}
 }
 
 @keyframes cloud-mid {
