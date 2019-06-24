@@ -4,6 +4,16 @@ Primary color: #a883e4
 Secondary color: #33cdcb
 */
 
+:root {
+	--primary-color: #a883e4;
+	--secondary-color: #33cdcb;
+	--dark-grey: #595959;
+	--handwriting: 'Sue Ellen Francisco', sans-serif;
+	--main-text: 'Raleway', sans-serif;
+	--normal-font: 400;
+	--heavy-font: 500;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -11,25 +21,25 @@ Secondary color: #33cdcb
 
 /*Tags*/
 body {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
+	font-family: var(--main-text);
+	font-weight: var(--normal-font);
 	font-size: 16px;
 	line-height: 1.5;
 	color: black;
 }
 
 header {
-	background-color: #a883e4;
+	background-color: var(--primary-color);
 }
 
 nav {
-	background-color: #a883e4;
-	font-weight: 500;
+	background-color: var(--primary-color);
+	font-weight: var(--heavy-font);
 }
 
 footer {
-	background-color: #a883e4;
-	font-weight: 500;
+	background-color: var(--primary-color);
+	font-weight: var(--heavy-font);
 	clear: both;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -42,17 +52,17 @@ footer {
 }
 
 h1 {
-	color: #595959;
-	font-family: 'Sue Ellen Francisco', sans-serif;
+	color: var(--dark-grey);
+	font-family: var(--handwriting);
 	font-size: 42px;
-	font-weight: 400;
+	font-weight: var(--normal-font);
 }
 
 h2 {
-	font-family: 'Sue Ellen Francisco', sans-serif;
-	color: #595959;
+	font-family: var(--handwriting);
+	color: var(--dark-grey);
 	font-size: 32px;
-	font-weight: 400;
+	font-weight: var(--normal-font);
 }
 
 a {
@@ -60,40 +70,28 @@ a {
 	text-decoration: none;
 }
 
+form {
+	margin-bottom: 10px;
+}
+
 label, input, textarea {
 	margin-bottom: 5px;
+	display: block;
+	width: 50%;
 }
 
 label {
 	vertical-align: top;
 }
 
-form {
-	margin-bottom: 10px;
+input[type=submit] {
+	width: 150px;
 }
 
-button {
+button, .button {
 	border: none;
 	font-family: inherit;
-	background-color: #33cdcb;
-	color: black;
-	text-decoration: none;
-	padding: 10px;
-	border-radius: 6px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-	-webkit-transition: 0.2s opacity;
-	-o-transition: 0.2s opacity;
-	transition: 0.2s opacity;
-	display: block;
-	margin: 30px auto;
-	max-width: 300px;
-	text-align: center;
-}
-
-.button {
-	border: none;
-	font-family: inherit;
-	background-color: #33cdcb;
+	background-color: var(--secondary-color);
 	color: black;
 	text-decoration: none;
 	padding: 10px;
@@ -175,7 +173,7 @@ embed {
 }
 
 .grid_item {
-	background-color: #33cdcb;
+	background-color: var(--secondary-color);
 	padding: 10px;
 	width: auto;
 
@@ -196,13 +194,13 @@ embed {
 }
 
 .cloud-mid {
-  -webkit-animation: 37s cloud-mid infinite alternate linear;
-          animation: 37s cloud-mid infinite alternate linear;
+	-webkit-animation: 37s cloud-mid infinite alternate linear;
+	        animation: 37s cloud-mid infinite alternate linear;
 }
 
 .cloud-right {
-  -webkit-animation: 31s cloud-right infinite alternate linear;
-          animation: 31s cloud-right infinite alternate linear;
+	-webkit-animation: 31s cloud-right infinite alternate linear;
+	        animation: 31s cloud-right infinite alternate linear;
 }
 
 /*IDs*/
@@ -214,13 +212,19 @@ embed {
 	border-radius: 50%;
 }
 
+#experience {
+	width: 50%;
+	text-align: center;
+	margin: auto;
+}
+
 /*Pseudo Classes*/
 a:visited {
 	text-decoration: underline;
 }
 
 a:hover, a:focus {
-	color: var(dark-grey);
+	color: var(--dark-grey);
 }
 
 a:active {
@@ -291,25 +295,25 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @-webkit-keyframes cloud-right {
-  from {
-    -webkit-transform: translate(2650px, 95px);
-            transform: translate(2650px, 95px);
-  }
-  to {
-    -webkit-transform: translate(-3000px, 95px);
-            transform: translate(-3000px, 95px);
-  }
+	from {
+		-webkit-transform: translate(2650px, 95px);
+		        transform: translate(2650px, 95px);
+	}
+	to {
+		-webkit-transform: translate(-3000px, 95px);
+		        transform: translate(-3000px, 95px);
+	}
 }
 
 @keyframes cloud-right {
-  from {
-    -webkit-transform: translate(2650px, 95px);
-            transform: translate(2650px, 95px);
-  }
-  to {
-    -webkit-transform: translate(-3000px, 95px);
-            transform: translate(-3000px, 95px);
-  }
+	from {
+		-webkit-transform: translate(2650px, 95px);
+		        transform: translate(2650px, 95px);
+	}
+	to {
+		-webkit-transform: translate(-3000px, 95px);
+		        transform: translate(-3000px, 95px);
+	}
 }
 
 @-webkit-keyframes cloud-mid {

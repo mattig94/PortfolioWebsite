@@ -64,16 +64,22 @@ a {
 	text-decoration: none;
 }
 
+form {
+	margin-bottom: 10px;
+}
+
 label, input, textarea {
 	margin-bottom: 5px;
+	display: block;
+	width: 50%;
 }
 
 label {
 	vertical-align: top;
 }
 
-form {
-	margin-bottom: 10px;
+input[type=submit] {
+	width: 150px;
 }
 
 button, .button {
@@ -181,6 +187,12 @@ embed {
 	float: left;
 	margin: 40px;
 	border-radius: 50%;
+}
+
+#experience {
+	width: 50%;
+	text-align: center;
+	margin: auto;
 }
 
 /*Pseudo Classes*/
