@@ -35,13 +35,14 @@
 		<div>
 			<form action="#" method="post" id="contact-form">
 				<label for="email" class="contact-label">Email: </label>
-				<input type="email" id="email" required placeholder="Required">
+				<input type="text" id="email" placeholder="Required">
 				<label for="phone" class="contact-label">Telephone: </label>
 				<input type="tel" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Optional">
 				<label for="message" class="contact-label">Message: </label>
-				<textarea id="message" maxlength="240" required placeholder="Required. Max length: 240 characters"></textarea>
+				<textarea id="message" maxlength="240" placeholder="Required. Max length: 240 characters"></textarea>
 				<input type="submit" value="Send Message">
 			</form>
+			<p class="error-message"></p>
 		</div>
 	</div>
 	<footer>

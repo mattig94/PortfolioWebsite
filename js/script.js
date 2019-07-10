@@ -37,7 +37,7 @@
 	}
 
 	function validateMessage() {
-		if ($messageInput.value === -1) {
+		if ($messageInput.value.length < 5) {
 			showErrorMessage($messageInput, 'Please include a message');
 			return false;
 		};
