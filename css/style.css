@@ -52,15 +52,19 @@ footer {
 h1 {
 	color: var(--dark-grey);
 	font-family: var(--secondary-text);
-	font-size: 42px;
+	font-size: 32px;
 	font-weight: var(--normal-font);
 }
 
 h2 {
 	font-family: var(--secondary-text);
 	color: var(--dark-grey);
-	font-size: 32px;
+	font-size: 22px;
 	font-weight: var(--normal-font);
+}
+
+h3 {
+	font-family: var(--secondary-text);
 }
 
 a {
@@ -149,6 +153,10 @@ embed {
 	color: white;
 }
 
+.gallery img {
+	width: 100%;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -164,7 +172,6 @@ embed {
 	background-color: var(--secondary-color);
 	padding: 10px;
 	width: auto;
-
 }
 
 .mainContent {
@@ -174,18 +181,6 @@ embed {
 .profile {
 	max-width: 700px;
 	margin: 0 auto;
-}
-
-.cloud-left {
-	animation:45s cloud-left infinite alternate linear;
-}
-
-.cloud-mid {
-	animation: 37s cloud-mid infinite alternate linear;
-}
-
-.cloud-right {
-	animation: 31s cloud-right infinite alternate linear;
 }
 
 /*IDs*/
@@ -222,30 +217,33 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 /*Media Queries*/
-@media all and (max-width: 768px) {
+@media all and (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr;
 	}
 }
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 600px) and (max-width: 900px) {
 	.grid {
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media all and (min-width: 992px) and (max-width: 1200px) {
+@media all and (min-width: 900px) and (max-width: 1200px) {
 	.grid {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
 	h1 {
-		font-size: 32px;
+		font-size: 28px;
 	}
 	h2 {
-		font-size: 22px;
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 16px;
 	}
 	.grid {
 		grid-gap: 10px;
@@ -255,6 +253,18 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 }
 /*Animation*/
+.cloud-left {
+	animation:45s cloud-left infinite alternate linear;
+}
+
+.cloud-mid {
+	animation: 37s cloud-mid infinite alternate linear;
+}
+
+.cloud-right {
+	animation: 31s cloud-right infinite alternate linear;
+}
+
 @keyframes cloud-left {
 	from {
 		transform: translate(-100px, 40px);

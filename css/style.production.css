@@ -48,15 +48,19 @@ footer {
 h1 {
 	color: #3b3b3b;
 	font-family: 'Sanchez', serif;
-	font-size: 42px;
+	font-size: 32px;
 	font-weight: 400;
 }
 
 h2 {
 	font-family: 'Sanchez', serif;
 	color: #3b3b3b;
-	font-size: 32px;
+	font-size: 22px;
 	font-weight: 400;
+}
+
+h3 {
+	font-family: 'Sanchez', serif;
 }
 
 a {
@@ -175,6 +179,10 @@ embed {
 	color: white;
 }
 
+.gallery img {
+	width: 100%;
+}
+
 .grid {
 	display: -ms-grid;
 	display: grid;
@@ -192,7 +200,6 @@ embed {
 	background-color: #cdedda;
 	padding: 10px;
 	width: auto;
-
 }
 
 .mainContent {
@@ -202,21 +209,6 @@ embed {
 .profile {
 	max-width: 700px;
 	margin: 0 auto;
-}
-
-.cloud-left {
-	-webkit-animation:45s cloud-left infinite alternate linear;
-	        animation:45s cloud-left infinite alternate linear;
-}
-
-.cloud-mid {
-	-webkit-animation: 37s cloud-mid infinite alternate linear;
-	        animation: 37s cloud-mid infinite alternate linear;
-}
-
-.cloud-right {
-	-webkit-animation: 31s cloud-right infinite alternate linear;
-	        animation: 31s cloud-right infinite alternate linear;
 }
 
 /*IDs*/
@@ -257,33 +249,36 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 /*Media Queries*/
-@media all and (max-width: 768px) {
+@media all and (max-width: 600px) {
 	.grid {
 		-ms-grid-columns: 1fr;
 		grid-template-columns: 1fr;
 	}
 }
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 600px) and (max-width: 900px) {
 	.grid {
 		-ms-grid-columns: 1fr 20px 1fr;
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media all and (min-width: 992px) and (max-width: 1200px) {
+@media all and (min-width: 900px) and (max-width: 1200px) {
 	.grid {
 		-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
 	h1 {
-		font-size: 32px;
+		font-size: 28px;
 	}
 	h2 {
-		font-size: 22px;
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 16px;
 	}
 	.grid {
 		grid-gap: 10px;
@@ -293,6 +288,21 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 }
 /*Animation*/
+.cloud-left {
+	-webkit-animation:45s cloud-left infinite alternate linear;
+	        animation:45s cloud-left infinite alternate linear;
+}
+
+.cloud-mid {
+	-webkit-animation: 37s cloud-mid infinite alternate linear;
+	        animation: 37s cloud-mid infinite alternate linear;
+}
+
+.cloud-right {
+	-webkit-animation: 31s cloud-right infinite alternate linear;
+	        animation: 31s cloud-right infinite alternate linear;
+}
+
 @-webkit-keyframes cloud-left {
 	from {
 		-webkit-transform: translate(-100px, 40px);
@@ -303,6 +313,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 		        transform: translate(3500px, 1500px);
 	}
 }
+
 @keyframes cloud-left {
 	from {
 		-webkit-transform: translate(-100px, 40px);
