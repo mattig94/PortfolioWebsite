@@ -183,6 +183,11 @@ embed {
 	margin: 0 auto;
 }
 
+.screenshot {
+	padding: 10px;
+	width: 100%;
+}
+
 /*IDs*/
 #selfPortrait {
 	height: 250px;
